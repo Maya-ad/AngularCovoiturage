@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+</head>
+<body>
+
+<div class="container">
+  <h2>Modifier une Offre</h2>
+  <div style="float:left;width: 40%;">
+  <form>
+    <div class="form-group">
+      <label > Proposé par</label>
+      <input #nom class="form-control"  placeholder="Modifier l'employée" >
+    </div>
+    <div class="form-group">
+      <label >Ville Départ</label>
+      <input #vd type="text" class="form-control"  placeholder="Modifier la ville de départ" >
+    </div>
+    <div class="form-group">
+        <label>Ville d'arrivée </label>
+        <input #va type="text" class="form-control"  placeholder="Modifier la ville d'arrivéé" >
+   
+    </div>
+  </form>
+</div>
+<div style="padding:25px;float:left;width: 40%;">
+<button  style="margin-bottom: 40px;"
+(click)="updateEmploye(nom.value)" class="btn btn-primary">Modifier l'employee</button> <br>
+<button style="margin-bottom: 40px;"
+(click)="updateVD(vd.value)" class="btn btn-primary">Modifier la ville de départ</button> <br>
+<button 
+(click)="updateVM(va.value)" class="btn btn-primary">Modifer la ville d'arrivée</button> <br>
+</div>
+</div> 
+    <!-- <input #box >
+<button 
+(click)="updateOffre(Offre.id,box.value)">change to name</button>-->
+<!--<button *ngIf="Offre.name==='adjad'"
+(click)="updateOffre(Offre.id,'maya')">change to prénom</button>-->
+</body>
+</html>

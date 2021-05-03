@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+     
+</head>
+<body>
+<div>   
+        <h1> Listes des offres </h1>
+        <table class="table">
+                <thead class="thead-dark">        
+         <tr> <th>Offre ID </th><th>Proposé par</th><th>Ville départ</th><th>Ville d'arrivée</th><th>Date </th>
+                        <th>Modifier</th><th>Supprimer</th></tr> </thead>
+                        <tbody>                
+        <tr *ngFor="let Offre of offres |async">
+                <td> {{ Offre.id }}</td>
+                <td> {{Offre.Employee}}</td>
+                <td>  {{Offre.vDepart}}</td>
+                <td> {{Offre.vArrivee}}</td>
+                <td> {{Offre.date | date :'dd MMM yy'}}</td>
+                <td>   
+                <button type="button" (click)="update(Offre.id)" class="btn btn-warning">mettre à jour </button>   
+                </td> 
+               
+
+                <td><button type="button" class="btn btn-danger" (click)="deleteOffre(Offre.id)"> DELETE</button></td>
+        </tr>
+</tbody>   
+        </table>
+</div>
+<ng-template #noOffre>
+        <h1>Aucune offre ajoutée</h1>
+</ng-template>
+
+<div>
+        
+      <!--<router-outlet></router-outlet>-->  
+
+</div>
+
+</body><!-- <input #box >
+        <button 
+        (click)="updateOffre(Offre.id,box.value)">change to name</button>-->
+        <!--<button *ngIf="Offre.name==='adjad'"
+        (click)="updateOffre(Offre.id,'maya')">change to prénom</button>-->

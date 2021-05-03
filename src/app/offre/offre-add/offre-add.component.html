@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html >
+<head>
+ 
+</head>
+<body>
+
+
+  <h2>L'ajout d'une nouvelle Offre</h2>
+
+  <form class="was-validated">
+    <div class="form-group">
+      <label for="uname">Proposée par :</label>
+      <input #nom  type="text" class="form-control" id="uname" placeholder="Entrer l'employee"  required>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Ville de Départ :</label>
+      <input #vd  type="text" class="form-control"  placeholder="Entrer la ville e départ"  required>
+    
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+        <label for="pwd">Ville d'arrivée :</label>
+        <input #va type="text" class="form-control"  placeholder="Entrer la ville d'arrivée"  required>
+        
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+  </form>
+  <div>
+    <button (click)="createOffre(nom.value,vd.value,va.value)" class="btn btn-primary">créer une nouvelle offre</button>
+   </div> 
+</body>
+
